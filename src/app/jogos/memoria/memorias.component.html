@@ -7,7 +7,7 @@
     <div class="card shadow-lg p-0 m-2 bg-white rounded-3 card-jogo border border-5 border-dark" *ngFor="let item of listaTotal">
       <div class="card-body p-0 m-auto" (click)="abrir(item)">
         <div *ngIf="item.aberto &&  !item.possuiImagem" class="w-100 h-100 ">
-          <h2 class="display-3 ">{{item.id}}</h2>
+          <h3 class="display-3">{{item.id}}</h3>
           <h2>{{item.name | uppercase}}</h2>
         </div>
         <img *ngIf="item.aberto && item.possuiImagem" [src]="'assets/'+item.imagem" class="card-jogo p-1 rounded">
