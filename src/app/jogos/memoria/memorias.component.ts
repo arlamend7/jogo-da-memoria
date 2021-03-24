@@ -62,11 +62,12 @@ export class JogoDaMemoriaComponent implements OnInit{
     constructor(private title : Title){
         title.setTitle("Jogo da Memoria");
     }
+    finalizado = false;
     ngDoCheck(){
-        if(!this.disabled && this.listaTotal.every(x => x.aberto)){
+        if(!this.finalizado && !this.disabled && this.listaTotal.every(x => x.aberto)){
             setTimeout(() => {
                 window.alert("Parabéns, você ganhou o jogo!");
-
+                this.finalizado = true;
             },1000)
         }
 
@@ -105,7 +106,7 @@ export class JogoDaMemoriaComponent implements OnInit{
                     this.itemAnterior = new Carta({})
 
                     this.disabled = false;
-                },500); 
+                },1500); 
             }
             else{
                 this.itemAnterior = new Carta({})
