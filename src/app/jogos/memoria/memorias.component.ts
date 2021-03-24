@@ -106,7 +106,7 @@ export class JogoDaMemoriaComponent implements OnInit{
                     this.itemAnterior = new Carta({})
 
                     this.disabled = false;
-                },1500); 
+                },1500);
             }
             else{
                 this.itemAnterior = new Carta({})
