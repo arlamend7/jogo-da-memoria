@@ -8,7 +8,7 @@
       <div class="card-body p-0 m-auto" (click)="abrir(item)">
         <div *ngIf="item.aberto &&  !item.possuiImagem" class="w-100 h-100 ">
           <h3 class="display-3">{{item.id}}</h3>
-          <h2>{{item.name | uppercase}}</h2>
+          <h3>{{item.name | uppercase}}</h3>
         </div>
         <img *ngIf="item.aberto && item.possuiImagem" [src]="'assets/'+item.imagem" class="card-jogo p-1 rounded">
         <img *ngIf="!item.aberto" src="assets/fundo.jpg" class="card-jogo p-1 rounded">
